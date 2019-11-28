@@ -1,0 +1,26 @@
+version: '3.7'
+
+services:
+  pihole:
+    image: pihole/pihole:latest
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      # - "67:67/udp"
+      - "80:80/tcp"
+      - "443:443/tcp"
+    environment:
+      TZ: 'America/Argentina/Buenos_Aires'
+      WEBPASSWORD: 'change-me'
+    volumes:
+       - etc-pihole:/etc/pihole/
+       - etc-dnsmasq/:/etc/dnsmasq.d/
+    dns:
+      - 127.0.0.1
+      - 1.1.1.1
+    restart: unless-stopped
+
+volumes:
+  etc-pihole:
+  etc-dnsmasq:
+

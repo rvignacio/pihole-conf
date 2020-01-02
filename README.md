@@ -20,5 +20,5 @@ dns=default
 ## Setup guide
 https://www.smarthomebeginner.com/pi-hole-setup-guide/#Configuring_Your_Router_8211_Whole_Home_Ad_Blocking
 
-## List
+## List
 https://www.reddit.com/r/oisd_blocklist/comments/dwxgld/dbloisdnl_internets_1_domain_blocklist/

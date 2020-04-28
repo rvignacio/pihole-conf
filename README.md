@@ -16,6 +16,11 @@ dns=default
 ```
 # service network-manager restart
 ```
+4. Change resolv.conf to use the network DNS
+```
+# rm /etc/resolv.conf
+# ln -s /run/systemd/resolve/resolv.conf /etc/resolv.conf
+```
 
 ## Setup guide
 https://www.smarthomebeginner.com/pi-hole-setup-guide/#Configuring_Your_Router_8211_Whole_Home_Ad_Blocking
